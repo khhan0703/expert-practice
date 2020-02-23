@@ -47,7 +47,7 @@ int radixSort(int data[], int n, int digit, int startIdx, int endIdx)
     int mask = 1<<(digit-1);
     register int idxOf0, idxOf1;
     int tmpData;
-    while (1)
+    for (register int i = 0 ; i < n ; i++)
     {
         for (idxOf0 = startIdx;idxOf0 <= endIdx; idxOf0++)
         { 
