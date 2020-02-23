@@ -15,8 +15,8 @@ partition Do-Binary-Radix-Sort {
         endwhile (no)
         while (digit of data[idxOf1--] == 1) is (yes)
         endwhile (no)
-        :swap(data[idxOf0], data[idxOf1]);
-    repeat while (idxOf0 > idxOf1) is (no)
+        :swap(data[idxOf0--], data[idxOf1++]);
+    repeat while (idxOf0 + 1 == idxOf1) is (no)
     -> yes;
     :startIdxOf0 = startIdx
     endIdxOf0 = idxOf0
@@ -74,6 +74,7 @@ int radixSort(int data[], int n, int digit, int startIdx, int endIdx)
     int startIdxOf1 = idxOf1, endIdxOf1 = endIdx;
     if (digit == 1) 
     {
+        print4bit(data, n);
         return 0;
     }
     else 
