@@ -24,14 +24,16 @@ void print4bit(int arr[], int n)
     printf ("------\n");
 }
 
-extern int radixSort(int data[], int n, int digit, int startIdx, int endIdx);
+extern int binaryRadixSort(int data[], int n, int digit, int startIdx, int endIdx);
 
 int main()
 {
     int arr[10] = {9, 8, 7, 4, 3, 1, 2, 10, 5, 6};
     int n = sizeof(arr)/sizeof(arr[0]);
-    print(arr, n);
-    radixSort(arr, n, 4, 0, n-1);
-    print(arr, n);
+    //print(arr, n);
+    binaryRadixSort(arr, n, 4, 0, n-1);
+    //print(arr, n);
+
+    
     return 0;
 }

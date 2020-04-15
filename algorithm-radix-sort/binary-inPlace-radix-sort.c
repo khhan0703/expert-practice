@@ -40,7 +40,7 @@ end note
 extern void print(int arr[], int n);
 extern void print4bit(int arr[], int n);
 int RADIX = 2;
-int radixSort(int data[], int n, int digit, int startIdx, int endIdx)
+int binaryRadixSort(int data[], int n, int digit, int startIdx, int endIdx)
 {
     //print(arr, n);
     print4bit(data, n);
@@ -79,8 +79,8 @@ int radixSort(int data[], int n, int digit, int startIdx, int endIdx)
     }
     else 
     {
-       radixSort(data, endIdxOf0-startIdxOf0+1, digit-1, startIdxOf0, endIdxOf0);
-       radixSort(data, endIdxOf1-startIdxOf1+1, digit-1, startIdxOf1, endIdxOf1);
+       binaryRadixSort(data, endIdxOf0-startIdxOf0+1, digit-1, startIdxOf0, endIdxOf0);
+       binaryRadixSort(data, endIdxOf1-startIdxOf1+1, digit-1, startIdxOf1, endIdxOf1);
     }
     print4bit(data, n);
     return 0;
